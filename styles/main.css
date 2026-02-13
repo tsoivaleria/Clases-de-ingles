@@ -10,15 +10,10 @@
 :root{
     --fontBold: 'CustomFontBold', sans-serif;
     --fontRegular: 'CustomFontRegular', sans-serif;
-
-    --accent: #FBF138;
     --dark: #2B3541;
     --light: #F3F3F3;
     --white: #ffffff;
     --bg: #F3F3F3;
-    --new-gradient: linear-gradient(180deg, rgba(251, 241, 56, 0.7) 0%, rgba(253, 249, 182, 0.31) 100%);
-
-    --tr: .2s;
 }
 
 body {
@@ -41,6 +36,8 @@ a {
     align-items: center;
     gap: 20px;
     position: relative;
+    background: #FFF7F4;
+    padding: 60px 40px;
  }
  .hero-text {
     display: flex;
@@ -62,10 +59,7 @@ a {
     letter-spacing: 1.44px;
     text-transform: uppercase;
  }
- .hero-desc1{
-    margin-top: 40px;
-    margin-bottom: 0;
- }
+
  .hero-text span{
     color: var(--dark);
     font-family: var(--fontRegular);
@@ -73,41 +67,6 @@ a {
     font-weight: 400;
     line-height: 125%;
     margin-right: 15px;
- }
- .hero-desc2{
-    width: 100%;
-    max-width: 297px;
-    margin-top: clamp(16px, 1vw, 20px);
-    margin-bottom: 0;
-    margin-left: 100px;
-    font-size: 18px;
- }
-
- .hero-btn:hover{
-    background: var(--dark);
-    color: var(--accent);
-    box-shadow: 0px 13px 24px 0px rgba(70, 86, 106, 0.20);
-    cursor: pointer;
- }
-.scroll{
-    margin-bottom: 0;
-}
-.scroll-arrow{
-    display: block;
-    width: 52px;
-    height: auto;
-}
- .hero-bg {
-   display: flex;
-   background-color: transparent;
-   background-repeat: no-repeat;
-   background-image: url(../images/hero.png);
-   
- }
-
- .hero {
-   background: #FFF7F4;
-   padding: 60px 40px;
  }
  
  /* Grid */
@@ -162,21 +121,6 @@ a {
    align-items: center;
  }
  
- .btn-primary {
-   background: #f26b3a;
-   color: #fff;
-   padding: 14px 28px;
-   border-radius: 999px;
-   text-decoration: none;
-   font-weight: 600;
-   transition: transform 0.2s ease, background 0.2s ease;
- }
- 
- .btn-primary:hover {
-   background: #e85f2e;
-   transform: translateY(-2px);
- }
- 
  /* Правая часть (декоративная) */
  .hero-visual {
    display:block;
@@ -201,14 +145,6 @@ a {
    display: flex;
    flex-direction: column;
    align-items: center;
- }
- 
- .plans-title {
-   font-size: 28px;
-   font-weight: 700;
-   color: #00b7a5;
-   text-align: center;
-   margin-bottom: 50px;
  }
  
  /* ===== Card ===== */
@@ -272,24 +208,6 @@ a {
  .new-price {
    color: #000;
  }
- 
- /* ===== Button ===== */
- .plan-btn {
-   background: #ff7a45;
-   color: #fff;
-   border: none;
-   border-radius: 999px;
-   padding: 16px 36px;
-   font-size: 16px;
-   font-weight: 600;
-   cursor: pointer;
-   transition: transform 0.2s ease, background 0.2s ease;
- }
- 
- .plan-btn:hover {
-   background: #f86a30;
-   transform: translateY(-2px);
- }
 
  /* 5 pasos */
  .steps-section {
@@ -322,11 +240,6 @@ a {
    margin-bottom: 71px;
  }
  
- .step-item {
-   width: 200px;
-   flex-shrink: 0;
- }
- 
  .step-svg1 {
    display:block;
    width: 242px;
@@ -334,6 +247,7 @@ a {
     background-image: url(../images/hexon1.svg);
     background-repeat: no-repeat;
     background-size: contain;
+    cursor: pointer;
 }
 .step-svg2 {
    display:block;
@@ -342,6 +256,7 @@ a {
     background-image: url(../images/hexon2.svg);
     background-repeat: no-repeat;
     background-size: contain;
+    cursor: pointer;
 }
 .step-svg3 {
    display:block;
@@ -350,6 +265,7 @@ a {
     background-image: url(../images/hexon3.svg);
     background-repeat: no-repeat;
     background-size: contain;
+    cursor: pointer;
 }
 .step-svg4 {
    display:block;
@@ -358,6 +274,7 @@ a {
     background-image: url(../images/hexon4.svg);
     background-repeat: no-repeat;
     background-size: contain;
+    cursor: pointer;
 }
 .step-svg5 {
    display:block;
@@ -367,13 +284,6 @@ a {
     background-repeat: no-repeat;
     background-size: contain;
 }
- 
- .step-text {
-   fill: #ffffff;
-   font-size: 18px;
-   font-weight: 600;
-   dominant-baseline: middle;
- }
  
  .steps-btn {
    align-items: center;
@@ -397,7 +307,6 @@ a {
    box-shadow: 0 4px 10px rgba(180, 124, 92, 0.35);
  }
  
-
  .certificate-img {
    max-width: 180px;
    cursor: zoom-in;
@@ -413,12 +322,6 @@ a {
    max-width: 900px;
    margin: 0 auto;
    text-align: center;
- }
- 
- .levels__title {
-   font-size: 32px;
-   font-weight: 700;
-   color: #12bfa1;
  }
  
  .levels__subtitle {
@@ -527,7 +430,103 @@ a {
    border-radius: 50%;
    flex-shrink: 0;
  }
-
+ .teacher {
+   padding: 80px 20px;
+   background: #fff;
+ }
+ 
+ .teacher__container {
+   max-width: 1100px;
+   margin: 0 auto;
+ }
+ 
+ .teacher__top {
+   display: flex;
+   gap: 40px;
+   align-items: flex-start;
+ }
+ 
+ .teacher__photo img {
+   width: 100%;
+   max-width: 420px;
+   border-radius: 12px;
+   object-fit: cover;
+ }
+ 
+ .teacher__info {
+   flex: 1;
+ }
+ 
+ .teacher__label {
+   display: inline-block;
+   color: #1bb3a7;
+   font-size: 14px;
+   margin-bottom: 8px;
+ }
+ 
+ .teacher__name {
+   font-size: 42px;
+   color: #ff6b3d;
+   margin: 0 0 20px;
+ }
+ 
+ .teacher__info p {
+   font-size: 16px;
+   line-height: 1.6;
+   margin-bottom: 14px;
+   color: #333;
+ }
+ 
+ .teacher__certificate {
+   margin: 0 0;
+   text-align: center;
+ }
+ 
+ .teacher__certificate img {
+   max-width: 380px;
+   width: 100%;
+ }
+ 
+ .teacher__cta {
+   text-align: center;
+   margin-top: 36px;
+ }
+ 
+ .teacher__btn {
+   display: inline-block;
+   padding: 16px 36px;
+   background: #ff6b3d;
+   color: #fff;
+   font-size: 18px;
+   border-radius: 30px;
+   text-decoration: none;
+   transition: background 0.3s ease;
+ }
+ 
+ .teacher__btn:hover {
+   background: #e85b30;
+ }
+.info{
+    margin-top: 80px;
+    display: flex;
+    text-align: left;
+    gap: 67px;
+ }
+ .info-header{
+    display: block;
+    color: #FF6E40;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 125%;
+    margin-bottom: 20px;
+ }
+ .info-text{
+    color: 494747;
+    font-family: var(--fontRegular);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+ }
  .footer {
    background: #FFF7F4;
    padding: 70px 20px;
@@ -617,190 +616,6 @@ a {
    font-size: 40px;
    color: #fff;
    cursor: pointer;
- }
- 
- .teacher {
-   padding: 80px 20px;
-   background: #fff;
- }
- 
- .teacher__container {
-   max-width: 1100px;
-   margin: 0 auto;
- }
- 
- .teacher__top {
-   display: flex;
-   gap: 40px;
-   align-items: flex-start;
- }
- 
- .teacher__photo img {
-   width: 100%;
-   max-width: 420px;
-   border-radius: 12px;
-   object-fit: cover;
- }
- 
- .teacher__info {
-   flex: 1;
- }
- 
- .teacher__label {
-   display: inline-block;
-   color: #1bb3a7;
-   font-size: 14px;
-   margin-bottom: 8px;
- }
- 
- .teacher__name {
-   font-size: 42px;
-   color: #ff6b3d;
-   margin: 0 0 20px;
- }
- 
- .teacher__info p {
-   font-size: 16px;
-   line-height: 1.6;
-   margin-bottom: 14px;
-   color: #333;
- }
- 
- .teacher__certificate {
-   margin: 0 0;
-   text-align: center;
- }
- 
- .teacher__certificate img {
-   max-width: 380px;
-   width: 100%;
- }
- 
- .teacher__cta {
-   text-align: center;
-   margin-top: 36px;
- }
- 
- .teacher__btn {
-   display: inline-block;
-   padding: 16px 36px;
-   background: #ff6b3d;
-   color: #fff;
-   font-size: 18px;
-   border-radius: 30px;
-   text-decoration: none;
-   transition: background 0.3s ease;
- }
- 
- .teacher__btn:hover {
-   background: #e85b30;
- }
- 
- /* About */
-
-.aboutus{
-    margin-bottom: 170px;
-}
- .about{
-    display: flex;
-    gap: 77px;
-    margin-top: 158px;
- }
- .about-text{
-    flex-basis: calc(100% - 581px - 77px);
- }
- .about-text h3{
-    font-family: var(--fontBold);
-    font-size: 40px;
-    width: 100%;
-    max-width: 600px;
-    font-weight: 700;
-    line-height: 125%;
-    margin-top: 0;
-    margin-bottom: 0;
- }
- .about-text p{
-    font-family: var(--fontRegular);
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 150%;
-    margin-top: 19px;
-    margin-bottom: 0;
- }
- .sign-up-btn{
-    height: 64px;
-    width: 225px;
-    text-align: center;
-    margin-top: 34px;
-    background-color: var(--accent);
-    border: none;
-    color: var(--dark);
-    font-family: var(--fontBold);
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 150%;
-    letter-spacing: 0.48px;
-    text-transform: uppercase;
- }
- .sign-up-btn:hover{
-    background: var(--dark);
-    color: var(--accent);
-    cursor: pointer;
- }
- .about-img{
-    flex-basis: 581px;
- }
- .info{
-    margin-top: 80px;
-    display: flex;
-    text-align: left;
-    gap: 67px;
- }
- .info-header{
-    display: block;
-    color: #FF6E40;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 125%;
-    margin-bottom: 20px;
- }
- .info-text{
-    color: 494747;
-    font-family: var(--fontRegular);
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 150%;
- }
- footer{
-    background-color: var(--bg);
- }
- .footer-wrapper{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 50px;
- }
- .footer-nav{
-    gap: 90px;
-    margin-left: min(10vw, 72px);
- }
- .footer{
-    font-size: 14px;
- }
- .rights{
-    margin-top: 21px;
-    padding-bottom: 21px;
-    display: flex;
-    justify-content: space-between;
- }
- .rights-text{
-    font-family: var(--fontRegular);
-    color: var(--dark);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-    opacity: 0.3;
  }
 
 /* ============================= */
