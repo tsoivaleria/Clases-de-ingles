@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const plan = button.dataset.plan;
         const deviceType = isMobile() ? 'mobile' : 'desktop';
   
-        let message = 'Hola! Quiero reservar mi clase gratis 😊';
+        let message = 'Hola! Quiero reservar mi clase gratis';
   
         if (plan) {
           message = `Hola! Me interesa el Plan ${plan}. ¿Podemos hablar? 😊`;
@@ -62,8 +62,47 @@ document.addEventListener('DOMContentLoaded', function () {
   if (btn) {
     btn.addEventListener('click', function () {
       window.open('https://forms.gle/3qLV6j3cxfcvEaNe8', '_blank');
-      // если нужно в той же вкладке:
-      // window.location.href = 'https://forms.gle/3qLV6j3cxfcvEaNe8';
     });
   }
+});
+document.addEventListener('DOMContentLoaded', function () {
+
+  const steps = document.querySelectorAll('.step-item');
+
+  const phone = '34651645170';
+  const googleFormLink = 'https://forms.gle/3qLV6j3cxfcvEaNe8';
+
+  const actions = {
+
+    plans: () => {
+      document.querySelector('#plans')
+        .scrollIntoView({ behavior: 'smooth' });
+    },
+
+    form: () => {
+      window.open(googleFormLink, '_blank');
+    },
+
+    interview: () => {
+      openWhatsApp('Quiero una entrevista personal');
+    },
+
+    lesson: () => {
+      openWhatsApp('Quiero mi clase gratis');
+    }
+
+  };
+
+  steps.forEach(step => {
+    step.addEventListener('click', function () {
+      const action = actions[this.dataset.action];
+      if (action) action();
+    });
+  });
+
+  function openWhatsApp(message) {
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  }
+
 });
